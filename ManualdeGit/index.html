@@ -1,0 +1,360 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de GIT | Meu site com git</title>
+    <link rel="stylesheet" href="codes/style.css">
+    <script src="codes/script.js"></script>
+</head>
+
+<body>
+
+    <div class="aling-flex">
+        <header class="colunm">
+            <nav class="navigation-vertical">
+                <h2 class="te">Utilizando GIT</h1>
+                    <ul class="topcs" id="topcs">
+                        <!-- Navegação entre tópicos -->
+                    </ul>
+            </nav>
+
+        </header>
+        <section class="colunm">
+            <div class="ali">
+                <main class="main-sec">
+                    <h1 class="title">Manual de como utilizar o GIT</h1>
+                </main>
+                <section class="sec">
+                    <div class="topic" id="estados">
+                        <h2 class="top-1">Estados</h2>
+                        <ul class="list-item">
+                            <li id="modificado">Modificado (modified)</li>
+                            <li id="preparado">Preparado (staged/index)</li>
+                            <li id="consolidado">Consolidado (committed)</li>
+                        </ul>
+                    </div>
+
+                    <div class="topic" id="ajuda">
+                        <h2 class="top-1">Ajuda</h2>
+                        <div class="subtopic" id="ajuda-geral">
+                            <h3 class="top-2">Geral</h3>
+                            <ul class="list-item">
+                                <li id="git-help"><code>git help</code></li>
+                            </ul>
+                        </div>
+                        <div class="subtopic" id="ajuda-especifica">
+                            <h3>Comando específico</h3>
+                            <ul class="list-item">
+                                <li id="git-help-add"><code>git help add</code></li>
+                                <li id="git-help-commit"><code>git help commit</code></li>
+                                <li id="git-help-any"><code>git help &lt;qualquer_comando_git&gt;</code></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic" id="configuracao">
+                        <h2 class="top-1">Configuração</h2>
+                        <div class="subtopic" id="configuracao-geral">
+                            <h3 class="top-2">Geral</h3>
+                            <p>As configurações do GIT são armazenadas no arquivo <code>.gitconfig</code> localizado
+                                dentro do diretório do usuário do Sistema Operacional.</p>
+                            <ul class="list-item">
+                                <li id="setar-usuario">Setar usuário:
+                                    <code>git config --global user.name "vitoriaellen03"</code>
+                                </li>
+                                <li id="setar-email">Setar email:
+                                    <code>git config --global user.email contato.vitoriaellen03@gmail.com</code>
+                                </li>
+                                <li id="setar-editor">Setar editor: <code>git config --global core.editor vim</code>
+                                </li>
+                                <li id="setar-merge-tool">Setar ferramenta de merge:
+                                    <code>git config --global merge.tool vimdiff</code>
+                                </li>
+                                <li id="setar-excludesfile">Setar arquivos a serem ignorados:
+                                    <code>git config --global core.excludesfile ~/.gitignore</code>
+                                </li>
+                                <li id="listar-configuracoes">Listar configurações: <code>git config --list</code></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic" id="ignorar-arquivos">
+                        <h2 class="top-1">Ignorar Arquivos</h2>
+                        <p>Os nomes de arquivos/diretórios ou extensões de arquivos listados no arquivo
+                            <code>.gitignore</code> não serão adicionados em um repositório.
+                        </p>
+                        <ul class="list-item">
+                            <li id="ignorar-geral"><strong>Geral:</strong> Armazenado no diretório do usuário do SO.
+                            </li>
+                            <li id="ignorar-repositorio"><strong>Por repositório:</strong> Armazenado no diretório do
+                                repositório.</li>
+                        </ul>
+                    </div>
+
+                    <div class="topic" id="repositorio-local">
+                        <h2 class="top-1">Repositório Local</h2>
+                        <ul class="list-item">
+                            <li id="criar-repositorio">Criar novo repositório: <code>git init</code></li>
+                            <li id="verificar-estado">Verificar estado dos arquivos/diretórios: <code>git status</code>
+                            </li>
+                            <li id="adicionar-arquivo">
+                                Adicionar arquivo/diretório (staged area):
+                                <ul class="list-item">
+                                    <li id="adicionar-arquivo-especifico">Adicionar um arquivo:
+                                        <code>git add meu_arquivo.txt</code>
+                                    </li>
+                                    <li id="adicionar-diretorio">Adicionar um diretório:
+                                        <code>git add meu_diretorio</code>
+                                    </li>
+                                    <li id="adicionar-todos">Adicionar todos os arquivos/diretórios:
+                                        <code>git add .</code>
+                                    </li>
+                                    <li id="adicionar-ignorado">
+                                        <p>Adicionar um arquivo listado no <code>.gitignore</code>:</p>
+                                        <code>git add -f arquivo_no_gitignore.txt</code>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="comitar-arquivo">
+                                Comitar arquivo/diretório:
+                                <ul class="list-item">
+                                    <li id="comitar-arquivo-especifico">Comitar um arquivo:
+                                        <code>git commit meu_arquivo.txt</code>
+                                    </li>
+                                    <li id="comitar-varios">Comitar vários arquivos:
+                                        <code>git commit meu_arquivo.txt meu_outro_arquivo.txt</code>
+                                    </li>
+                                    <li id="comitar-com-mensagem">Comitar com mensagem:
+                                        <code>git commit meu_arquivo.txt -m "minha mensagem de commit"</code>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="remover-arquivo">
+                                Remover arquivo/diretório:
+                                <ul class="list-item">
+                                    <li id="remover-arquivo-especifico">Remover arquivo:
+                                        <code>git rm meu_arquivo.txt</code>
+                                    </li>
+                                    <li id="remover-diretorio">Remover diretório: <code>git rm -r diretorio</code></li>
+                                </ul>
+                            </li>
+                            <li id="visualizar-historico">
+                                Visualizar histórico:
+                                <ul class="list-item">
+                                    <li id="exibir-historico">Exibir histórico: <code>git log</code></li>
+                                    <li id="exibir-historico-diff">Exibir histórico com diff: <code>git log -p -2</code>
+                                    </li>
+                                    <li id="exibir-historico-resumo">Exibir resumo do histórico:
+                                        <code>git log --stat</code>
+                                    </li>
+                                    <li id="exibir-informacoes-resumidas">Exibir informações resumidas:
+                                        <code>git log --pretty=oneline</code>
+                                    </li>
+                                    <li id="exibir-historico-formatado">Exibir histórico com formatação:
+                                        <code>git log --pretty=format:"%h - %an, %ar : %s"</code>
+                                    </li>
+                                    <li id="exibir-historico-arquivo">Exibir histórico de um arquivo específico:
+                                        <code>git log -- &lt;caminho_do_arquivo&gt;</code>
+                                    </li>
+                                    <li id="exibir-historico-modificacao">Exibir histórico modificação de um arquivo:
+                                        <code>git log --diff-filter=M -- &lt;caminho_do_arquivo&gt;</code>
+                                    </li>
+                                    <li id="exibir-historico-autor">Exibir histórico de um autor:
+                                        <code>git log --author=usuario</code>
+                                    </li>
+                                    <li id="exibir-revisao-autor">Exibir revisão e autor:
+                                        <code>git blame -L 12,22 meu_arquivo.txt</code>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="topic" id="desfazendo-operacoes">
+                        <h2 class="top-1">Desfazendo operações</h2>
+                        <ul class="list-item">
+                            <li id="desfazendo-alteracao-local">Desfazendo alteração local (working directory):
+                                <code>git checkout -- meu_arquivo.txt</code>
+                            </li>
+                            <li id="desfazendo-alteracao-staging">Desfazendo alteração local (staging area):
+                                <code>git reset HEAD meu_arquivo.txt</code>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="topic" id="repositorio-remoto">
+                        <h2 class="top-1">Repositório Remoto</h2>
+                        <ul class="list-item">
+                            <li id="exibir-repositorios">Exibir repositórios remotos: <code>git remote</code></li>
+                            <li id="vincular-repositorio">Vincular repositório local:
+                                <code>git remote add origin [link do repositório]</code>
+                            </li>
+                            <li id="exibir-informacoes-repositorios">Exibir informações dos repositórios remotos:
+                                <code>git remote show origin</code>
+                            </li>
+                            <li id="renomear-repositorio">Renomear repositório remoto:
+                                <code>git remote rename origin curso-git</code>
+                            </li>
+                            <li id="desvincular-repositorio">Desvincular repositório remoto:
+                                <code>git remote rm curso-git</code>
+                            </li>
+                            <li id="enviar-arquivos">Enviar arquivos para o repositório remoto:
+                                <code>git push -u origin master</code>
+                            </li>
+                            <li id="atualizar-repositorio">Atualizar repositório local: <code>git pull</code></li>
+                            <li id="buscar-alteracoes">Buscar alterações: <code>git fetch</code></li>
+                            <li id="clonar-repositorio">Clonar repositório remoto:
+                                <code>git clone [link do repositório]</code>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="topic" id="tags">
+                        <h2 class="top-1">Tags</h2>
+                        <ul class="list-item">
+                            <li id="criando-tag-leve">Criando uma tag leve: <code>git tag vs-1.1</code></li>
+                            <li id="criando-tag-anotada">Criando uma tag anotada:
+                                <code>git tag -a vs-1.1 -m "Minha versão 1.1"</code>
+                            </li>
+                            <li id="criando-tag-assinada">Criando uma tag assinada:
+                                <code>git tag -s vs-1.1 -m "Minha tag assinada 1.1"</code>
+                            </li>
+                            <li id="criando-tag-commit">Criando tag a partir de um commit:
+                                <code>git tag -a vs-1.2 9fceb02</code>
+                            </li>
+                            <li id="criando-tags-remoto">Criando tags no repositório remoto:
+                                <code>git push origin vs-1.2</code>
+                            </li>
+                            <li id="criando-todas-tags">Criando todas as tags locais no remoto:
+                                <code>git push origin --tags</code>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="topic" id="branches">
+                        <h2 class="top-1">Branches</h2>
+                        <p>O <code>master</code> é o branch principal do GIT.</p>
+                        <ul class="list-item">
+                            <li id="criando-novo-branch">Criando um novo branch: <code>git branch bug-123</code></li>
+                            <li id="trocando-branch">Trocando para um branch existente:
+                                <code>git checkout bug-123</code>
+                            </li>
+                            <li id="criar-e-trocar-branch">Criar um novo branch e trocar:
+                                <code>git checkout -b bug-456</code>
+                            </li>
+                            <li id="voltar-branch-principal">Voltar para o branch principal:
+                                <code>git checkout master</code>
+                            </li>
+                            <li id="resolver-merge">Resolver merge entre os branches: <code>git merge bug-123</code>
+                            </li>
+                            <li id="apagando-branch">Apagando um branch: <code>git branch -d bug-123</code></li>
+                            <li id="listar-branches">Listar branches: <code>git branch</code></li>
+                            <li id="listar-branches-informacoes">Listar branches com informações dos últimos commits:
+                                <code>git branch -v</code>
+                            </li>
+                            <li id="listar-branches-fundidos">Listar branches que já foram fundidos:
+                                <code>git branch --merged</code>
+                            </li>
+                            <li id="listar-branches-nao-fundidos">Listar branches que não foram fundidos:
+                                <code>git branch --no-merged</code>
+                            </li>
+                            <li id="branches-remoto">
+                                Criando branches no repositório remoto:
+                                <ul class="list-item">
+                                    <li id="criando-branch-remoto">Criando um branch remoto com o mesmo nome:
+                                        <code>git push origin bug-123</code>
+                                    </li>
+                                    <li id="criando-branch-remoto-diferente">Criando um branch remoto com nome
+                                        diferente: <code>git push origin bug-123:new-branch</code></li>
+                                    <li id="baixar-branch-remoto">Baixar um branch remoto para edição:
+                                        <code>git checkout -b bug-123 origin/bug-123</code>
+                                    </li>
+                                    <li id="apagar-branch-remoto">Apagar branch remoto:
+                                        <code>git push origin:bug-123</code>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="topic" id="rebasing">
+                        <h2 class="top-1">Rebasing</h2>
+                        <p>Fazendo o rebase entre o branch <code>bug-123</code> e o <code>master</code>:</p>
+                        <code>git checkout experiment</code><br>
+                        <code>git rebase master</code>
+                    </div>
+
+                    <div class="topic" id="stash">
+                        <h2 class="top-1">Stash</h2>
+                        <p>Para alternar entre um branch e outro sem fazer commit, você pode criar um stash, que é como
+                            um branch temporário:</p>
+                        <ul class="list-item">
+                            <li id="criar-stash">Criar um stash: <code>git stash</code></li>
+                            <li id="listar-stashes">Listar stashes: <code>git stash list</code></li>
+                            <li id="voltar-ultimo-stash">Voltar para o último stash: <code>git stash apply</code></li>
+                            <li id="voltar-stash-especifico">Voltar para um stash específico:
+                                <code>git stash apply stash@{2}</code>
+                            </li>
+                            <li id="criar-branch-a-partir-do-stash">Criar um branch a partir de um stash:
+                                <code>git stash branch meu_branch</code>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="topic" id="reescrevendo-historico">
+                        <h2 class="top-1">Reescrevendo o histórico</h2>
+                        <ul class="list-item">
+                            <li id="alterando-mensagens-commit">Alterando mensagens de commit:
+                                <code>git commit --amend -m "Minha nova mensagem"</code>
+                            </li>
+                            <li id="alterando-ultimos-commits">Alterando os últimos commits:</li>
+                            <ul class="list-item">
+                                <li id="git-rebase-interativo"><code>git rebase -i HEAD~3</code></li>
+                                <li>
+                                    <p>Marcar os commits para editar ou juntar usando <code>edit</code> ou
+                                        <code>squash</code>.
+                                    </p>
+                                </li>
+                            </ul>
+                            <li id="remover-historico-arquivo">Remover todo histórico de um arquivo:
+                                <code>git filter-branch --tree-filter 'rm -f passwords.txt' HEAD</code>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="topic" id="bisect">
+                        <h2 class="top-1">Bisect</h2>
+                        <p>O bisect é útil para encontrar um commit que gera um bug ou inconsistência:</p>
+                        <ul class="list-item">
+                            <li id="iniciar-pesquisa-bisect">Iniciar pesquisa binária: <code>git bisect start</code>
+                            </li>
+                            <li id="marcar-commit-ruim">Marcar o commit atual como ruim: <code>git bisect bad</code>
+                            </li>
+                            <li id="marcar-commit-bom">Marcar o commit de uma tag que está sem o bug:
+                                <code>git bisect good vs-1.1</code>
+                            </li>
+                            <li>Marcar o commit como bom ou ruim conforme necessário.</li>
+                            <li id="finalizar-pesquisa-bisect">Finalizar a pesquisa binária:
+                                <code>git bisect reset</code>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="colunm">
+            <div class="content">
+                <a id="link" target="_blank">
+                    <img src="" alt="Minha imagem" id="avatar">
+                    <h2 class="main-title" id="username"></h2>
+                    <p id="bio"></p>
+                </a>
+            </div>
+            <div class="alert"></div>
+        </section>
+    </div>
+
+</body>
+
+</html>

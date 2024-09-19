@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    margin: 0;
+    color: #fff;
+    background: #131313;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-family:'Arial', Arial, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3820B9;
+    border-radius: 4px;
+}
+
+header {
+    position: sticky;
+    width: 30%;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+
+.main-sec {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background: url('https://kinsta.com/pt/wp-content/uploads/sites/3/2020/01/git-vs-github.png');
+    overflow: hidden;
+}
+
+.main-sec::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.575);
+    z-index: 1;
+}
+
+.title {
+    position: relative;
+    z-index: 2;
+}
+
+
+.aling-flex {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.ali {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.colunm {
+    padding: 20px;
+    background: #141414;
+    overflow-x: hidden;
+}
+
+section.colunm {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.sec {
+    margin-top: 20px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+section.colunm:is(:last-child) {
+    width: 20%;
+}
+
+footer {
+    width: 100vw;
+    display: inline;
+}
+
+
+.topic {
+    margin: 20px 0;
+}
+
+.topic .top-1 {
+    margin-bottom: 20px;
+    background-color: rgba(21, 52, 138, 0.1);
+    padding: 8px 10px;
+    color: #6731ad;
+    border-radius: 8px;
+}
+
+
+.topic ul.list-item li {
+    display: block;
+    background-color: rgba(21, 52, 138, 0.1);
+    padding: 8px 10px;
+    color: #8546ce;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+.topic code {
+    display: block;
+    background-color: rgba(21, 52, 138, 0.1);
+    padding: 8px 10px;
+    color: #31ad65;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+.topic ul.list-item {
+    list-style: none;
+    padding-left: 0;
+}
+.topic p code, .topic li p code {
+    color: #31ad65;
+    display: inline;
+    padding: 4px;
+    margin: 5px;
+    line-height: 40px;
+}
+
+.topic#estados ul li, .topic#ignorar-arquivos ul li{
+    color: #31ad65;
+}
+
+
+.navigation-vertical ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+
+.navigation-vertical .topcs li {
+    line-height: 30px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navigation-vertical .topcs li a:hover {
+    background-color: #31ad65;
+}
+.navigation-vertical .topcs a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+}
+
+.active {
+    background: rgba(96, 131, 228, 0.1);
+}
+
+li.active ul li.active {
+    background: #31ad65;
+}
+
+.te {
+    margin-bottom: 30px;
+}
+.title {
+    font-size: 3em;
+}
+
+#avatar {
+    width: 100%;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    width: 150px;
+}
+
+.content a {
+    background: rgba(96, 131, 228, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: #31ad65;
+    transition: 0.3s;
+    text-align: justify;
+}
+
+.content a:hover {
+    background-color: #6731ad;
+    color: #fff;
+}
+
+.content h2 {
+    color: #6731ad;
+    display: block;
+    transition: color 0.3s;
+}
+
+.content a:hover h2 {
+    color: #fff;
+}
+
+code {
+    cursor: pointer;
+}
+
+.alert {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    margin-right: 0;
+    z-index: 1000;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 8px;
+  
+  }
+  .messege {
+    display: block;
+    z-index: 10000;
+    margin-right: 0;
+    background-color: #181818;
+    text-transform: capitalize;
+    padding: 5px 10px;
+    height: auto;
+    border-radius: 5px;
+  }
+  
